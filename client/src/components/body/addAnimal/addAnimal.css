@@ -1,0 +1,119 @@
+.btn-open-popup{
+    padding: 10px;
+    color: #444;
+    background: #A1BF34;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border: none;
+    text-decoration: none;
+    margin-right: 50px;
+    display: inline-block;
+}
+
+.btn-open-popup:hover{
+    background-color: #BBBBBB;
+}
+
+.container-all{
+    position: fixed; 
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+    background: rgba(0,0,0,.8);
+}
+
+
+.container-all:target{
+    visibility: visible;
+}
+
+.container-all:target .popup{
+    visibility: visible;
+}
+
+
+.popup {
+    width: 1000px;
+    height: 600px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: #F8F8F8;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+    border-radius: 3px;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0 15px;
+    text-align: center;
+    margin: auto;
+    color: #444;
+}
+
+.popup h2 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin: 20px 0;
+    letter-spacing: 1.5px;
+}
+
+input {
+    width: 100%;
+    height: 45px;
+    margin: 10px 0;
+    border: 2px solid #777;
+    outline: none;
+}
+
+select {
+    width: 100%;
+    height: 45px;
+    margin: 10px 0;
+    border: 2px solid #777;
+    outline: none;
+}
+
+
+.btn-close-popup{
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 20px;
+    background: none;
+    font-size: 20px;
+	transition: .3s ease all;
+	color: #BBBBBB;
+    cursor: pointer;
+}
+
+.btn-close-popup:hover {
+    color: darkgray;
+}
+
+.form-container{
+    align-items: center;
+}
+
+.popup  input {
+	width: 100%;
+	height: 40px;
+	font-size: 18px;
+	border: 1px solid #BBBBBB;
+}
+
+.popup .btn-submit {
+    width: 150px;
+    padding: 10px 0;
+    color: #444;
+    background: #A1BF34;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 10px;
+    border: none;
+}
+
+.popup  .btn-submit:hover {
+	background: #BBBBBB;
+}

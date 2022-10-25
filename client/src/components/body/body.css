@@ -1,0 +1,60 @@
+h1 {
+    color: rgb(18,43,74);
+    font-size: 2.4rem;
+    margin: 20px;
+    letter-spacing: 1.5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.animal-gestion-head{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+
+.table-container {
+    display: flex;
+    justify-content: center;
+    padding: 0 50px;
+}
+
+
+th, tr, td {
+    border: 1px solid rgb(134, 131, 131);
+    padding: 8px;
+}
+
+table  {
+    width: 95%;
+    margin: auto;
+}
+
+#deleteAndEdit{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.data-container:hover {
+    background-color: rgb(231, 218, 218);
+}
+
+
+
+.form-link {
+    text-decoration: none;
+}
