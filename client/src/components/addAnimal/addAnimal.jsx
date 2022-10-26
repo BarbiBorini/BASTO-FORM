@@ -152,9 +152,8 @@ function AddAnimal() {
           value={device_type}
           onChange={(e) => { setDevice_type(e.target.value) }}>
             <option disabled value="">Seleccione el tipo de dispositivo</option>
-            <option>Novillo</option>
-            <option>Toro</option>
-            <option>Vaquillona</option>
+            <option>Collar</option>
+            <option>Caravana</option>
           </select>
           </div>
 
