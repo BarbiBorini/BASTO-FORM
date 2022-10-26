@@ -5,10 +5,8 @@ import axios from 'axios';
 
 function AnimalsList() {
 
-
   const [animalsData, setAnimalsData] = useState([])
   
-
   // Gets all animals info
   useEffect(() => {
     axios.get('animals')
@@ -30,8 +28,8 @@ function AnimalsList() {
 
 
   return (
-    <div>
-      <table className="animals">
+    <div className='table-container'>
+      <table className="data-table">
         <thead>
           <tr>
             <th>ID senasa</th>

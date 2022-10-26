@@ -1,60 +1,226 @@
-h1 {
-    color: rgb(18,43,74);
-    font-size: 2.4rem;
-    margin: 20px;
-    letter-spacing: 1.5px;
-    font-family: 'Montserrat', sans-serif;
-}
+/* light blue #526D80 */
+/* dark blue #122B4A */
+/* lime #9EB938 */
+/* purple #2A044A */
+/* dark grey #687371 */
 
-body {
-    font-family: 'Montserrat', sans-serif;
+.notification{
+    color: #2A044A;
+    background: none;
+    font-style: italic;
+    font-size: 18px;
+    font-weight: bold;
     margin: 0;
-    padding: 0;
 }
 
-.app-container {
-    display: flex;
-    flex-direction: column;
+#btn-add {
+    margin: 20px;
+    display: block;
+    margin-left: 45px;
 }
 
-.animal-gestion-head{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap-reverse;
-    align-items: flex-start;
-    padding: 20px;
+#title {
+    margin: 20px;
+    display: block;
+    margin-left: 45px;
 }
 
+h2 {
+    color: #526D80;
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 20px;
+    font-family: 'Montserrat';
+    margin: 0;
+}
+
+.btn {
+    color: #fff;
+    background-color: #9EB938;
+    font-family: 'Montserrat';
+    text-decoration: none;
+    font-weight: bold;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 4px;
+    border: none;
+    width:120px;
+}
+
+.btn:hover {
+    background: #687371;
+}
 
 .table-container {
-    display: flex;
-    justify-content: center;
-    padding: 0 50px;
-}
-
-
-th, tr, td {
-    border: 1px solid rgb(134, 131, 131);
-    padding: 8px;
+	top: 50%;
+	left: 50%;
 }
 
 table  {
-    width: 95%;
+    width: 1500px;
+	border-collapse: collapse;
+	overflow: hidden;
+	box-shadow: 0 0 20px rgba(0,0,0,0.3);
     margin: auto;
+}
+
+thead {
+    background-color: #526D80;
+    color: #fff;
+    border: none;
+}
+
+th, tr, td {
+	padding: 15px;
+}
+
+th {
+	text-align: left;
+    background-color: #526D80;
+}
+
+th:hover{
+    background-color: #637b8c;
+}
+
+td {
+    color: #687371;
+}
+
+
+td:hover{
+    background-color: #dce1e5;
+}
+
+.data-container:hover{
+    background-color: #edf0f2;
 }
 
 #deleteAndEdit{
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: space-around;
 }
-.data-container:hover {
-    background-color: rgb(231, 218, 218);
+
+
+.container-all{
+    position: fixed; 
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+    background: rgba(0,0,0,.8);
 }
 
+.container-all:target{
+    visibility: visible;
+}
 
+.popup {
+    position: relative;
+    display: inline-block;
+    font-size: 18px;
+    width: 700px;
+    flex-direction: column;
+    background: #fff;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    padding: 1em;
+    text-align: left;
+    margin: auto;
+    color: #687371;
+}
 
-.form-link {
+.form-head {
+    text-align: center;
+}
+
+input {
+    width: 650px;
+    height: 45px;
+    margin: 10px 0;
+    border: 2px solid #dce1e5;
+    outline: none;
+    font-family: 'Montserrat';
+    font-size: 18px;
+    color: #687371;
+    border-radius: 4px;
+}
+
+input::placeholder {
+    font-family: 'Montserrat';
+    font-size: 18px;
+    color: #687371;
+}
+
+select {
+    font-family: 'Montserrat';
+    width: 660px;
+    height: 48px;
+    margin: 10px 0;
+    border-color: #dce1e5;
+    outline: none;
+    font-size: 18px;
+    color: #687371;
+    border-radius: 4px;
+}
+
+label {
+    font-weight: bold;
+    color: #526D80;
+}
+
+.input-container{
+    margin: 8px;
+}
+
+.btn-close-popup {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 20px;
+    background: none;
+    font-size: 20px;
+	transition: .3s ease all;
+	color: #687371;
+    cursor: pointer;
+}
+
+.btn-close-popup:hover {
+    color: #2A044A;
+}
+
+.btn-edit {
+    background: none;
+	border: none;
+	color: #A1BF34;
+    font-size: 25px;
+	font-family: 'Montserrat', sans-serif;
+	cursor: pointer;
+	transition: .3s ease all;
     text-decoration: none;
+}
+
+.btn-edit:hover{
+    color: #687371;
+}
+
+.btn-delete{
+    background: none;
+	border: none;
+	color: #2A044A;
+    font-size: 25px;
+	font-family: 'Montserrat', sans-serif;
+	cursor: pointer;
+	transition: .3s ease all;
+    text-decoration: none;
+}
+
+.btn-delete:hover{
+    color: #687371;
 }

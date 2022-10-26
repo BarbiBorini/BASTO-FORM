@@ -5,7 +5,7 @@
     align-items: center;
     padding: 0 30px;
     padding-top: 0px;
-    background: rgb(18,43,74);
+    background: #122B4A;
     background: linear-gradient(90deg, rgba(18,43,74,1) 0%, rgba(65,91,114,1) 100%);
 }
 .logo-img {
@@ -18,6 +18,6 @@ ul {
 
 .header-icons {
     display: inline-block;
-    color: white;
+    color: #fff;
     padding: 10px 15px;
 }

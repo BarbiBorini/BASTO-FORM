@@ -1,15 +1,12 @@
 import Header from './components/header/Header.jsx';
-import Body from './components/body/Body.jsx'
-import React from "react"
-import { Route, Routes } from 'react-router-dom';
+import Body from './components/body/Body.jsx';
+import React from "react";
 
 function App() {
   return (
     <div className="App">
       <Header/>
-      <Routes>
-        <Route exact path="/" element={<Body/>} />
-      </Routes>
+      <Body/>
     </div>
   );
 }
