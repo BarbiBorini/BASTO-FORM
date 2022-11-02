@@ -3,12 +3,12 @@ const mongoose = require('mongoose');
 const animalSchema = new mongoose.Schema({
     ID_senasa: {
         type: String,
-        required: [true, "Es necesario indicar el ID SENASA."],
+        required: true,
         trim: true
     },
     type: {
         type: String,
-        required: [true, "Por favor indique si es vaquillona, toro o novillo."],
+        required: true,
         trim: true
     },
     weight: {
@@ -17,17 +17,17 @@ const animalSchema = new mongoose.Schema({
     },
     paddock_name: {
         type: String,
-        required: [true, "Es necesario indicar el nombre del potrero."],
+        required: true,
         trim: false
     },
     device_type: {
         type: String,
-        required: [true, "Inidcar si el dispositivo es collar o caravana."],
+        required: true,
         trim: true
     },
     device_num: {
         type: String,
-        required: [true, "Inidcar el numero de dispositivo."]
+        required: true
     },
 }, {
     timestamps: false

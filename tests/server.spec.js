@@ -3,7 +3,7 @@ const request = require("supertest");
 const mongoose = require('mongoose');
 const Animal = require('../models/animalModel');
 
-//Creating test animal
+// Creating test animal
 const testAnimal = {
     ID_senasa: "abcdefgh12345678",
     type: "Vaquillona",
@@ -14,11 +14,11 @@ const testAnimal = {
 };
 
 beforeEach(async () => {
-    await Animal.deleteMany();
+    await Animal.deleteMany(); // This line deletes preloaded animals.
     await new Animal(testAnimal).save();
 });
 
-//Closing database conncetion to exit jest
+// Closing database conncetion to exit jest:
 afterAll(async () => {
     await mongoose.connection.close();
 });
@@ -27,17 +27,17 @@ afterAll(async () => {
 // This animal will be deleted as part of the test:
 let animalTestId = ''
 
-// TEST Get animals Info
+// TEST Get animals Info:
 describe('GET /animals', () => {
     test("should respond with a 200 status code", async () => {
         const response = await request(app).get("/animals").send()
         expect(response.statusCode).toBe(200)
-        animalTestId = response._body[0]._id //Here we save the Id of the first animal.
+        animalTestId = response._body[0]._id // Here we save the Id of the first animal.
         console.log(animalTestId)
     });
 })
 
-// TEST add new Animnal
+// TEST add new Animnal:
 describe('POST /animals/add', () => {
     test("should respond with a 200 status code", async () => {
         const response = await request(app).post('/animals/add')
@@ -53,7 +53,7 @@ describe('POST /animals/add', () => {
     });
 })
 
-// TEST get animal info by ID
+// TEST get animal info by ID:
 describe('GET /animals/info', () => {
     test("should respond with a 200 status code", async () => {
         const response = await request(app).get(`/animals/info/${animalTestId}`).send()
@@ -62,19 +62,17 @@ describe('GET /animals/info', () => {
     });
 })
 
-// TEST update Animnal
+// TEST update Animnal:
 describe('PATCH /animals/update', () => {
 test("should respond with a 200 status code", async () => {
         const response = await request(app).patch(`/animals/update/${animalTestId}`)
-        .send({
-            type: "Toro"
-            })
+        .send({ type: "Toro" })
         expect(response.statusCode).toBe(200);
         console.log(response._body)
     });
 })
 
-// TEST delete Animnal
+// TEST delete Animnal:
 describe('DELETE /animals/delete', () => {
     test("should respond with a 200 status code", async () => {
         const response = await request(app).delete(`/animals/delete/${animalTestId}`)
@@ -84,13 +82,16 @@ describe('DELETE /animals/delete', () => {
     });
 })
 
-// TEST adding an aninmal with invalid data
+// TEST adding an aninmal with invalid data:
 describe('POST /animals/add invalid data', () => {
     test("should respond with a 400 status code", async () => {
     const response = await request(app).post('/animals/add')
         .send({
             ID_senasa: "not16chars",
+            type: "Vaquillona",
             weight: "String instead of number",
+            paddock_name: "Barbara Borini",
+            device_type: "Collar",
             device_num: "not8chars",
         })
         expect(response.statusCode).toBe(400);
